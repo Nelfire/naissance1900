@@ -1,10 +1,20 @@
 package fr.diginamic.classes;
 
-import java.util.Date;
+import java.time.LocalDate;
 
+/**
+ * @author 20-100
+ *
+ */
 public class Naissance {
+	/*
+	 * 1 ) Créer une classe Naissance ANNEE Long DateEvenement Date Nombre Long
+	 */
+	/** annee de naissance */
 	private long annee;
-	private Date dateEvenement;
+	/** date Evenement */
+	private LocalDate dateEvenement;
+	/** nombre de naissances */
 	private long nombre;
 
 	/**
@@ -14,7 +24,7 @@ public class Naissance {
 	 * @param dateEvenement
 	 * @param nombre
 	 */
-	public Naissance(long annee, Date dateEvenement, long nombre) {
+	public Naissance(long annee, LocalDate dateEvenement, long nombre) {
 		super();
 		this.annee = annee;
 		this.dateEvenement = dateEvenement;
@@ -22,7 +32,7 @@ public class Naissance {
 	}
 
 	/**
-	 * Getter
+	 * recupérer annee
 	 * 
 	 * @return the annee
 	 */
@@ -31,7 +41,7 @@ public class Naissance {
 	}
 
 	/**
-	 * Setter
+	 * definir année
 	 * 
 	 * @param annee the annee to set
 	 */
@@ -40,25 +50,25 @@ public class Naissance {
 	}
 
 	/**
-	 * Getter
+	 * récupérer date evenement
 	 * 
 	 * @return the dateEvenement
 	 */
-	public Date getDateEvenement() {
+	public LocalDate getDateEvenement() {
 		return dateEvenement;
 	}
 
 	/**
-	 * Setter
+	 * Définir date evenement
 	 * 
 	 * @param dateEvenement the dateEvenement to set
 	 */
-	public void setDateEvenement(Date dateEvenement) {
+	public void setDateEvenement(LocalDate dateEvenement) {
 		this.dateEvenement = dateEvenement;
 	}
 
 	/**
-	 * Getter
+	 * Recuperer nombre de naissances
 	 * 
 	 * @return the nombre
 	 */
@@ -67,7 +77,7 @@ public class Naissance {
 	}
 
 	/**
-	 * Setter
+	 * Définit nombre de naissances
 	 * 
 	 * @param nombre the nombre to set
 	 */
@@ -75,7 +85,6 @@ public class Naissance {
 		this.nombre = nombre;
 	}
 
-	@Override
 	public String toString() {
 		return "C'est une naissance ! Année : " + annee + ", Date evenement : " + dateEvenement + ", Nombre : "
 				+ nombre;
